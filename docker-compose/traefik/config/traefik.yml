@@ -39,22 +39,22 @@ entryPoints:
 
 # Configure your CertificateResolver here...
 # ---
-# certificatesResolvers:
-#   staging:
-#     acme:
-#       email: cuelist@icloud.com
-#       storage: /etc/traefik/certs/acme.json
-#       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
-#       httpChallenge:
-#         entryPoint: web
-#
-#   production:
-#     acme:
-#       email: your-email@example.com
-#       storage: /etc/traefik/certs/acme.json
-#       caServer: "https://acme-v02.api.letsencrypt.org/directory"
-#       httpChallenge:
-#         entryPoint: web
+ certificatesResolvers:
+   staging:
+     acme:
+       email: cuelist@icloud.com
+       storage: /etc/traefik/certs/acme.json
+       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
+       httpChallenge:
+         entryPoint: web
+
+   production:
+     acme:
+       email: your-email@example.com
+       storage: /etc/traefik/certs/acme.json
+       caServer: "https://acme-v02.api.letsencrypt.org/directory"
+       httpChallenge:
+        entryPoint: web
 
 # (Optional) Overwrite Default Certificates
 # tls:
@@ -73,5 +73,5 @@ providers:
     exposedByDefault: false  # Default is true
   file:
     # watch for dynamic configuration changes
-    directory: /etc/traefik
+    directory: /srv/Traefik
     watch: true
