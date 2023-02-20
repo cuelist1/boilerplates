@@ -43,7 +43,7 @@ entryPoints:
    staging:
      acme:
        email: cuelist@icloud.com
-       storage: /srv/traefik/certs/acme.json
+       storage: /srv/Traefik/certs/acme.json
        caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
        httpChallenge:
          entryPoint: web
@@ -51,7 +51,7 @@ entryPoints:
    production:
      acme:
        email: cuelist@icloud.com
-       storage: /srv/traefik/certs/acme.json
+       storage: /srv/Traefik/certs/acme.json
        caServer: "https://acme-v02.api.letsencrypt.org/directory"
        httpChallenge:
         entryPoint: web
@@ -61,8 +61,8 @@ entryPoints:
 #   stores:
 #     default:
 #       defaultCertificate:
-#         certFile: /srv/traefik/certs/cert.pem
-#         keyFile: /srv/traefik/certs/cert-key.pem
+#         certFile: /srv/Traefik/certs/cert.pem
+#         keyFile: /srv/Traefik/certs/cert-key.pem
 # (Optional) Disable TLS version 1.0 and 1.1
 #   options:
 #     default:
