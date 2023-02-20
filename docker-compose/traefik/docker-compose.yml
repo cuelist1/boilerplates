@@ -3,15 +3,8 @@ version: "3.3"
 services:
 
   traefik:
-    image: "traefik:v2.9"
+    image: "traefik:latest"
     container_name: "traefik"
-    command:
-      #- "--log.level=DEBUG"
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.web-secured.address=:443"
     ports:
       - "8080:80" #web
       - "8081:8080" #dashboard
