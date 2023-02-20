@@ -18,7 +18,7 @@ services:
       - "443:443" #secureweb
       
    volumes:
-      - /etc/traefik:/etc/traefik
+      - /srv/Traefik:/srv/Traefik
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /srv/Traefik:/srv/Traefik
 
