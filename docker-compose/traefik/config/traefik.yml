@@ -17,9 +17,9 @@ global:
 
 # (Optional) Enable API and Dashboard
 # ---
-# api:
-#  dashboard: true  # true by default
-#  insecure: true  # Don't do this in production!
+ api:
+  dashboard: true  # true by default
+  insecure: true  # Don't do this in production!
 
 # Entry Points configuration
 # ---
@@ -43,15 +43,15 @@ entryPoints:
    staging:
      acme:
        email: cuelist@icloud.com
-       storage: /etc/traefik/certs/acme.json
+       storage: /srv/traefik/certs/acme.json
        caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
        httpChallenge:
          entryPoint: web
 
    production:
      acme:
-       email: your-email@example.com
-       storage: /etc/traefik/certs/acme.json
+       email: cuelist@icloud.com
+       storage: /srv/traefik/certs/acme.json
        caServer: "https://acme-v02.api.letsencrypt.org/directory"
        httpChallenge:
         entryPoint: web
@@ -61,8 +61,8 @@ entryPoints:
 #   stores:
 #     default:
 #       defaultCertificate:
-#         certFile: /etc/traefik/certs/cert.pem
-#         keyFile: /etc/traefik/certs/cert-key.pem
+#         certFile: /srv/traefik/certs/cert.pem
+#         keyFile: /srv/traefik/certs/cert-key.pem
 # (Optional) Disable TLS version 1.0 and 1.1
 #   options:
 #     default:
